@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <%- include('../head'); -%>
+  <body>
+    <%- include('../navbar', {active: 'drivers'}); -%>
+    <main class="p-3">
+      <table class="table">
+        <thead>
+          <tr>
+            _id: String,
+            driverName: [String],
+            location: String,
+            available: String,
+            phone: Number
+            <th class="border-0"><a href="/drivers" class="btn <%= (order === 'driver') ? 'btn-dark' : 'btn-primary' -%>">Driver</a></th>
+            <th class="border-0"><a href="/drivers?sort=driverName" class="btn <%= (order === 'driverName') ? 'btn-dark' : 'btn-primary' -%>">Name</a></th>
+            <th class="border-0"><a href="/drivers?sort=available" class="btn <%= (order === 'available') ? 'btn-dark' : 'btn-primary' -%>">Available</a></th>
+            <th class="border-0"><a href="/drivers?sort=phone" class="btn <%= (order === 'phone') ? 'btn-dark' : 'btn-primary' -%>">Phone Number</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%_ for (const driver of drivers) { -%>
+            <tr>
+              <td><a href="/drivers/<%= driver.driverName -%>"><%= driver.driverName -%></a></td>
+              <td><%= driver.driverName -%></td>
+              <td><%= driver.available -%></td>
+              <td><%= driver.phone -%></td>
+            </tr>
+          <%_ } -%>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>

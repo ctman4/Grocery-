@@ -1,0 +1,4 @@
+//Routing is the transmission of data packets from a source to a destination address.
+
+//A routing protocol determines the path by which the packets are forwarded, shares
+//information with immediate neighbor devices and other devices in the network, and adjusts to changing network conditions.

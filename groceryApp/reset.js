@@ -84,7 +84,7 @@ const drivers = [
 
 // Reset the database
 mongoose.connection.dropDatabase()
-  .then(() => Promise.all(drviers.map(driver => driver.save())))
+  .then(() => Promise.all(drivers.map(driver => driver.save())))
   .then(() => Promise.all(lists.map(list => list.save())))
   .then(() => mongoose.connection.close())
   .then(() => console.log('Database is ready.'))

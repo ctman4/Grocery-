@@ -28,7 +28,7 @@ app.use(function(request, response, next){
 });
 
 //Redirect from the homepage
-app.get('/', funtion(request, response) {
+app.get('/', function(request, response){
   response.redirect('/lists')
 });
 

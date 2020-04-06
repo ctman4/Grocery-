@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 //define the schema
-const Driver = new mongoose.schema({
+const Driver = new mongoose.Schema({
   _id: String,
   driverName: [String],
   location: String,

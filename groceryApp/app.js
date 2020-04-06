@@ -29,7 +29,7 @@ app.use(function(request, response, next){
 
 //Redirect from the homepage
 app.get('/', funtion(request, response) {
-  response.redirect('/lists');
+  response.redirect('/lists')
 });
 
 //route content requests
